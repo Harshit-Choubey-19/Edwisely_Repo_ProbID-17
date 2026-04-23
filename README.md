@@ -175,8 +175,11 @@ The system includes heuristic-based detection mechanisms:
 
 ```bash
 cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
+python -m venv venv
+./venv/Scripts/activate.ps1 #for windows
+pip install "fastapi[standard]"
+pip install motor #for mongoDB
+fastapi dev server.py
 ```
 
 ---
@@ -186,6 +189,7 @@ uvicorn main:app --reload
 ```bash
 cd frontend
 npm install
+npm i react-router-dom axios
 npm run dev
 ```
 
